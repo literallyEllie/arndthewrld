@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3eb019b8-10d0-4464-980e-fad34acbd64b" name="Changes" comment="avaje">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/49d14c0e-c812-4e38-be42-94edf03149ba.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/49d14c0e-c812-4e38-be42-94edf03149ba/storage_v2/_src_/database/API.-v0AAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/49d14c0e-c812-4e38-be42-94edf03149ba/storage_v2/_src_/database/API.-v0AAA/schema/PUBLIC.aaZQjQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-kotlin.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-style.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-test.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/PrincipleUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/PrincipleUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/PrincipleUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/exception/InvalidUsernameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/App.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AppConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AuthConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/ModulesConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/SqlConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/AppEnvConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/InstanceEnvironment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth/OAuthConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/Cipher.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/JwtProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/session/DevSessionHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/Profile.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/UserCredentials.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/AuthRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/UserRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/UserService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/AuthService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/CredentialsValidator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/ContextExt.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/LogExt.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/ErrorResponseMapping.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/Router.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/AuthController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/UserController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="arndthewrld" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="arndthewrld" type="f1a62948:ProjectNode" />
+                <item name="arndthewrld" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="arndthewrld" type="f1a62948:ProjectNode" />
+                <item name="arndthewrld" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="arndthewrld" type="f1a62948:ProjectNode" />
+                <item name="arndthewrld" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2enjt0XwZFYvx4JNdJtYJsaRyXi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DummyHttpServer.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build arndthewrld.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.arndthewrld [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.arndthewrld:http:server [:http:server:HttpServer.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.arndthewrld:web [:web:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.AppKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.HttpServerKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ellie/dev/public/arndthewrld/web/src/main/kotlin/com/arndthewld/app/config/environment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
+    ],
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;/Users/ellie/.gradle&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment" />
+      <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config" />
+      <recent name="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/web/endpoint/user/principle" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext" />
+      <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth" />
+      <recent name="$PROJECT_DIR$/commons/src/main/kotlin/com/arndthewrld/date" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.arndthewld.app.domain.service.auth" />
+      <recent name="com.arndthewld.app.config" />
+      <recent name="com.arndthewrld.http.plugin" />
+      <recent name="com.arndthewrld.http.probe" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.arndtheworld.http" />
+      <recent name="com.arndtheworld.http.factory" />
+      <recent name="com.arndtheworld.http.controller" />
+      <recent name="com.arndtheworld.http.bootstrap.config" />
+      <recent name="com.arndtheworld.http.bootstrap" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.arndthewrld.web.endpoint.user.principle" />
+      <recent name="com.arndthewrld.web.context" />
+      <recent name="com.arndthewrld.date" />
+      <recent name="com.arndthewrld.user" />
+      <recent name="com.arndthewrld.web.endpoint" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.AppKt">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arndthewrld.web.Main" />
+      <module name="arndthewrld.web.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arndthewrld.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arndthewrld [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arndthewld.app.AppKt" />
+      <module name="arndthewrld.web.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpServerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arndthewrld.http.HttpServerKt" />
+      <module name="arndthewrld.http.server.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.arndthewrld [clean]" />
+      <item itemvalue="Kotlin.AppKt" />
+      <item itemvalue="Kotlin.HttpServerKt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.AppKt" />
+        <item itemvalue="Kotlin.HttpServerKt" />
+        <item itemvalue="Gradle.arndthewrld [clean]" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3eb019b8-10d0-4464-980e-fad34acbd64b" name="Changes" comment="" />
+      <created>1712547446851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712547446851</updated>
+      <workItem from="1712547447897" duration="8707000" />
+      <workItem from="1713330141105" duration="2609000" />
+      <workItem from="1713333364667" duration="22150000" />
+      <workItem from="1713463216281" duration="4798000" />
+      <workItem from="1715137039662" duration="2638000" />
+      <workItem from="1715150334662" duration="4883000" />
+      <workItem from="1715166417390" duration="7478000" />
+      <workItem from="1715231076285" duration="581000" />
+      <workItem from="1715231745947" duration="46282000" />
+      <workItem from="1715536587924" duration="167000" />
+      <workItem from="1715536758118" duration="91000" />
+    </task>
+    <task id="LOCAL−00001" summary="avaje">
+      <option name="closed" value="true" />
+      <created>1715151019257</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1715151019257</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="avaje" />
+    <option name="LAST_COMMIT_MESSAGE" value="avaje" />
+  </component>
+</project>

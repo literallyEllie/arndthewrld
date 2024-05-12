@@ -1,0 +1,23 @@
+instance:
+  environment: LOCAL
+
+http:
+  server_port: 8080
+  context: /api
+
+db:
+  mysql:
+    #    url: jdbc:postgresql://localhost/db?user=username&password=password
+    url: jdbc:h2:mem:api
+    username: sa
+    password: ''
+
+auth:
+  password:
+    cipher: abc123
+  oauth:
+    callback: "http://127.0.0.1:8080/api/auth/oauth/callback"
+    platforms:
+      google:
+        key: ''
+        secret: ''

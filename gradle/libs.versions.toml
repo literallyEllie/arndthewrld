@@ -1,0 +1,80 @@
+[versions]
+# Plugins
+detekt = "1.23.6"
+kotlin = "1.9.23"
+kover = "0.7.6"
+ktlint-cli = "1.0.0"
+ktlint-gradle = "12.1.0"
+spotless = "6.25.0"
+
+# Core Libraries
+kotlinx-coroutines = "1.7.3"
+javalin = "6.1.4"
+# DI
+koin = "3.5.6"
+# Auth / Sessions
+pac4j-javalin = "6.0.0"
+pac4j-oauth = "6.0.2"
+jwt = "4.4.0"
+avaje-config = "3.14"
+
+# Datasource
+exposed = "0.50.1"
+mongodb-driver-sync = "5.0.1"
+postgres = "42.7.3"
+h2 = "2.2.224"
+hikaricp = "5.1.0"
+
+# Utilities
+jackson = "2.13.5"
+slf4j = "2.0.13"
+
+# Testing
+junit-jupiter = "5.10.2"
+mockk = "1.13.10"
+test-coreKtx = "1.5.0"
+
+[libraries]
+# Plugins
+plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version.ref = "kover" }
+plugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint-gradle" }
+plugin-spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+
+# Libraries
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+javalin = { module = "io.javalin:javalin", version.ref = "javalin" }
+koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+pac4j-javalin = { module = "org.pac4j:javalin-pac4j", version.ref = "pac4j-javalin" }
+pac4j-oauth = { module = "org.pac4j:pac4j-oauth", version.ref = "pac4j-oauth" }
+jwt = { module = "com.auth0:java-jwt", version.ref = "jwt" }
+avaje-config = { module = "io.avaje:avaje-config", version.ref = "avaje-config" }
+
+# Datasource
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
+mongodb-driver-sync = { module = "org.mongodb:mongodb-driver-sync", version.ref = "mongodb-driver-sync" }
+postgres = { module = "org.postgresql:postgresql", version.ref = "postgres" }
+h2 = { module = "com.h2database:h2", version.ref = "h2" }
+hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikaricp" }
+
+# Utilities
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+
+# Testing
+test-junit = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
+test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+test-kotlin-common = { module = "org.jetbrains.kotlin:kotlin-test-common", version.ref = "kotlin" }
+test-kotlin-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+test-kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+[plugins]
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+detekt = { id = "io.github.arurbosch.detekt", version.ref = "detekt" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
