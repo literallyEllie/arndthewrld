@@ -9,6 +9,7 @@ spotless = "6.25.0"
 
 # Core Libraries
 kotlinx-coroutines = "1.7.3"
+kotlinx-serialization = "1.6.3"
 javalin = "6.1.4"
 # DI
 koin = "3.5.6"
@@ -20,14 +21,16 @@ avaje-config = "3.14"
 
 # Datasource
 exposed = "0.50.1"
-mongodb-driver-sync = "5.0.1"
 postgres = "42.7.3"
 h2 = "2.2.224"
 hikaricp = "5.1.0"
 
-# Utilities
-jackson = "2.13.5"
+# Json
+jackson = "2.17.1"
+
+# Logging
 slf4j = "2.0.13"
+kermit = "2.0.3"
 
 # Testing
 junit-jupiter = "5.10.2"
@@ -45,6 +48,8 @@ plugin-spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", ver
 # Libraries
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
 javalin = { module = "io.javalin:javalin", version.ref = "javalin" }
 koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 pac4j-javalin = { module = "org.pac4j:javalin-pac4j", version.ref = "pac4j-javalin" }
@@ -55,15 +60,19 @@ avaje-config = { module = "io.avaje:avaje-config", version.ref = "avaje-config" 
 # Datasource
 exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
 exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
-mongodb-driver-sync = { module = "org.mongodb:mongodb-driver-sync", version.ref = "mongodb-driver-sync" }
+exposed-datetime = { module = "org.jetbrains.exposed:exposed-kotlin-datetime", version.ref = "exposed" }
 postgres = { module = "org.postgresql:postgresql", version.ref = "postgres" }
 h2 = { module = "com.h2database:h2", version.ref = "h2" }
 hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikaricp" }
 
-# Utilities
+# Json
 jackson-core = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
 jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
-slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+jackson-datetime = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+
+# Logging
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
 # Testing
 test-junit = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
@@ -74,6 +83,7 @@ test-kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-te
 
 [plugins]
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 detekt = { id = "io.github.arurbosch.detekt", version.ref = "detekt" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }

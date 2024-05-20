@@ -4,65 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb019b8-10d0-4464-980e-fad34acbd64b" name="Changes" comment="avaje">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/49d14c0e-c812-4e38-be42-94edf03149ba.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/49d14c0e-c812-4e38-be42-94edf03149ba/storage_v2/_src_/database/API.-v0AAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/49d14c0e-c812-4e38-be42-94edf03149ba/storage_v2/_src_/database/API.-v0AAA/schema/PUBLIC.aaZQjQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-kotlin.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-style.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-test.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/PrincipleUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/PrincipleUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/PrincipleUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/endpoint/user/principle/exception/InvalidUsernameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/App.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AppConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AuthConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/ModulesConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/SqlConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/AppEnvConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/InstanceEnvironment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth/OAuthConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/Cipher.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/JwtProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/session/DevSessionHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/Profile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/UserCredentials.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/AuthRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/UserRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/UserService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/AuthService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/CredentialsValidator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/ContextExt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/LogExt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/ErrorResponseMapping.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/Router.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/AuthController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/UserController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/application.yaml" afterDir="false" />
+    <list default="true" id="3eb019b8-10d0-4464-980e-fad34acbd64b" name="Changes" comment="basic auth app yipee">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detekt.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/ProfileRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/request/AuthenticationRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-kotlin.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-kotlin.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/web/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AppConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AppConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AuthConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AuthConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/ModulesConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/ModulesConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/SqlConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/SqlConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/AppEnvConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/AppEnvConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/InstanceEnvironment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/InstanceEnvironment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth/OAuthConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth/OAuthConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/Cipher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/Cipher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/JwtProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/JwtProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/session/DevSessionHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/session/DevSessionHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/Profile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/Profile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/UserCredentials.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/UserCredentials.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/AuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/AuthRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/UserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/AuthService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/AuthService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/CredentialsValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/CredentialsValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/ContextExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/ContextExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/LogExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/ErrorResponseMapping.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/ErrorResponseMapping.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/Router.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/Router.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/AuthController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/AuthController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/UserController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +80,14 @@
                 <item name="arndthewrld" type="f1a62948:ProjectNode" />
                 <item name="arndthewrld" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="formatting" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="arndthewrld" type="f1a62948:ProjectNode" />
+                <item name="arndthewrld" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -122,12 +106,30 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "literallyEllie"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:literallyEllie/arndthewrld.git",
+    "accountId": "d4f49e37-c9e5-415f-8cf3-bb5737782168"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -141,42 +143,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DummyHttpServer.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build arndthewrld.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.arndthewrld [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.arndthewrld:http:server [:http:server:HttpServer.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.arndthewrld:web [:web:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.AppKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.HttpServerKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ellie/dev/public/arndthewrld/web/src/main/kotlin/com/arndthewld/app/config/environment&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DummyHttpServer.executor": "Run",
+    "Gradle.Build arndthewrld.executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.arndthewrld [checkKotlinGradlePluginConfigurationErrors].executor": "Run",
+    "Gradle.arndthewrld [clean].executor": "Run",
+    "Gradle.arndthewrld [detektMain].executor": "Run",
+    "Gradle.arndthewrld [detekt].executor": "Run",
+    "Gradle.arndthewrld [ktlintFormat].executor": "Run",
+    "Gradle.arndthewrld [spotlessApply].executor": "Run",
+    "Gradle.arndthewrld:http:server [:http:server:HttpServer.main()].executor": "Run",
+    "Gradle.arndthewrld:web [:web:Main.main()].executor": "Run",
+    "Kotlin.AppKt.executor": "Run",
+    "Kotlin.HttpServerKt.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ellie/dev/public/arndthewrld",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
     ],
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;/Users/ellie/.gradle&quot;
+    "kotlin-gradle-user-dirs": [
+      "/Users/ellie/.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment" />
       <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config" />
       <recent name="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/web/endpoint/user/principle" />
@@ -207,21 +217,8 @@
       <recent name="com.arndthewrld.web.endpoint" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.AppKt">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.arndthewrld.web.Main" />
-      <module name="arndthewrld.web.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.arndthewrld.web.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="arndthewrld [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.arndthewrld [detekt]">
+    <configuration name="arndthewrld [checkKotlinGradlePluginConfigurationErrors]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -232,7 +229,73 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="checkKotlinGradlePluginConfigurationErrors" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="arndthewrld [detektMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="detektMain" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="arndthewrld [detekt]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="detekt" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="arndthewrld [ktlintFormat]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="ktlintFormat" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -250,25 +313,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpServerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.arndthewrld.http.HttpServerKt" />
-      <module name="arndthewrld.http.server.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.arndthewrld [clean]" />
+      <item itemvalue="Gradle.arndthewrld [checkKotlinGradlePluginConfigurationErrors]" />
+      <item itemvalue="Gradle.arndthewrld [detektMain]" />
+      <item itemvalue="Gradle.arndthewrld [detekt]" />
+      <item itemvalue="Gradle.arndthewrld [ktlintFormat]" />
       <item itemvalue="Kotlin.AppKt" />
-      <item itemvalue="Kotlin.HttpServerKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.arndthewrld [detekt]" />
+        <item itemvalue="Gradle.arndthewrld [ktlintFormat]" />
+        <item itemvalue="Gradle.arndthewrld [detektMain]" />
+        <item itemvalue="Gradle.arndthewrld [checkKotlinGradlePluginConfigurationErrors]" />
         <item itemvalue="Kotlin.AppKt" />
-        <item itemvalue="Kotlin.HttpServerKt" />
-        <item itemvalue="Gradle.arndthewrld [clean]" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +356,13 @@
       <workItem from="1715231076285" duration="581000" />
       <workItem from="1715231745947" duration="46282000" />
       <workItem from="1715536587924" duration="167000" />
-      <workItem from="1715536758118" duration="91000" />
+      <workItem from="1715536758118" duration="906000" />
+      <workItem from="1715912018876" duration="5413000" />
+      <workItem from="1715931032699" duration="2446000" />
+      <workItem from="1715933651379" duration="4439000" />
+      <workItem from="1716004661501" duration="1832000" />
+      <workItem from="1716188536466" duration="4083000" />
+      <workItem from="1716194545022" duration="20768000" />
     </task>
     <task id="LOCAL−00001" summary="avaje">
       <option name="closed" value="true" />
@@ -307,11 +371,21 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1715151019257</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="basic auth app yipee">
+      <option name="closed" value="true" />
+      <created>1715536992520</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1715536992520</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -326,6 +400,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="avaje" />
-    <option name="LAST_COMMIT_MESSAGE" value="avaje" />
+    <MESSAGE value="basic auth app yipee" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic auth app yipee" />
   </component>
 </project>

@@ -5,12 +5,18 @@ import com.arndthewld.app.domain.UserCredentials
 import io.javalin.http.BadRequestResponse
 import io.javalin.http.UnauthorizedResponse
 
-private interface CredentialsValidator {
-    fun authenticate(claim: UserCredentials, actual: UserCredentials)
+sealed interface CredentialsValidator {
+    fun authenticate(
+        claim: UserCredentials,
+        actual: UserCredentials,
+    )
 }
 
 class PlaintextValidator(private val cipher: Cipher) : CredentialsValidator {
-    override fun authenticate(claim: UserCredentials, actual: UserCredentials) {
+    override fun authenticate(
+        claim: UserCredentials,
+        actual: UserCredentials,
+    ) {
         if (!actual.isPlaintext() || claim.password == null) {
             throw BadRequestResponse("plaintext password not supported")
         }
@@ -22,7 +28,10 @@ class PlaintextValidator(private val cipher: Cipher) : CredentialsValidator {
 }
 
 class OAuth2Validator : CredentialsValidator {
-    override fun authenticate(claim: UserCredentials, actual: UserCredentials) {
+    override fun authenticate(
+        claim: UserCredentials,
+        actual: UserCredentials,
+    ) {
         if (!actual.isOAuth()) {
             throw BadRequestResponse("oauth not supported")
         }
@@ -36,4 +45,3 @@ class OAuth2Validator : CredentialsValidator {
         }
     }
 }
-

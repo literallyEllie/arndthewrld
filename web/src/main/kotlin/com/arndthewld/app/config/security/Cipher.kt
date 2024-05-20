@@ -2,7 +2,7 @@ package com.arndthewld.app.config.security
 
 import com.arndthewld.app.config.environment.AppEnvConfig
 import com.auth0.jwt.algorithms.Algorithm
-import java.util.*
+import java.util.Base64
 
 interface Cipher {
     val algorithm: Algorithm

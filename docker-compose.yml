@@ -1,0 +1,8 @@
+services:
+  app:
+    image: arndthewlrd:${VERSION}
+    build: .
+    volumes:
+      - /etc/arndthewlrd/config:/app/config
+    env_file:
+      - .env

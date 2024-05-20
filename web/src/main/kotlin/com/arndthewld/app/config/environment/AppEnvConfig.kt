@@ -14,9 +14,7 @@ object AppEnvConfig {
     lateinit var instanceEnvironment: InstanceEnvironment
 
     fun load() {
-        if (!initialised.compareAndSet(false, true)) {
-            throw RuntimeException("app config already initialised")
-        }
+        check(initialised.compareAndSet(false, true))
 
         loadInstanceEnvironment()
 
@@ -32,8 +30,9 @@ object AppEnvConfig {
     public operator fun get(key: String): String? = getValue(key)
 
     private fun loadInstanceEnvironment() {
-        instanceEnvironment = Config.getEnum(
-            InstanceEnvironment::class.java, "instance.environment", InstanceEnvironment.LOCAL
-        )
+        instanceEnvironment =
+            Config.getEnum(
+                InstanceEnvironment::class.java, "instance.environment", InstanceEnvironment.LOCAL,
+            )
     }
 }

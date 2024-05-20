@@ -1,0 +1,29 @@
+---
+complexity:
+  LongParameterList:
+    active: false
+  TooManyFunctions:
+    thresholdInFiles: 20
+    thresholdInObjects: 20
+    thresholdInClasses: 20
+    thresholdInInterfaces: 20
+exceptions:
+  SwallowedException:
+    active: false
+  TooGenericExceptionCaught:
+    active: false
+style:
+  MaxLineLength:
+    maxLineLength: 140
+  UnnecessaryAbstractClass:
+    active: false
+  UnusedImports:
+    active: false
+  WildcardImport:
+    active: false
+  MagicNumber:
+    active: false
+  ForbiddenComment:
+    active: false
+  ReturnCount:
+    active: false

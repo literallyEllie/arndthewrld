@@ -6,16 +6,19 @@ import org.eclipse.jetty.server.session.SessionHandler
 import java.io.File
 
 class DevSessionHandler {
-
-    fun fileBased() = SessionHandler().apply {
-        sessionCache = DefaultSessionCache(this).apply {
-            sessionDataStore = FileSessionDataStore().apply {
-                val baseDir = File(System.getProperty("java.io.tmpdir"))
-                this.storeDir = File(baseDir, "javalin-session-store").apply { mkdir() }
-            }
+    fun fileBased() =
+        SessionHandler().apply {
+            sessionCache =
+                DefaultSessionCache(this).apply {
+                    sessionDataStore = fileDataStore()
+                }
+            httpOnly = true
+            // make additional changes to your SessionHandler here
         }
-        httpOnly = true
-        // make additional changes to your SessionHandler here
-    }
 
+    private fun fileDataStore() =
+        FileSessionDataStore().apply {
+            val baseDir = File(System.getProperty("java.io.tmpdir"))
+            this.storeDir = File(baseDir, "javalin-session-store").apply { mkdir() }
+        }
 }

@@ -2,8 +2,11 @@ package com.arndthewld.app.web.controller
 
 import com.arndthewld.app.config.oauth.OAuthProviderSource
 import com.arndthewld.app.domain.UserCredentials
+import com.arndthewld.app.domain.service.UserService
 import com.arndthewld.app.domain.service.auth.AuthService
-import com.arndthewld.app.ext.createLogger
+import com.arndthewld.app.web.request.AuthenticatedResponse
+import com.arndthewld.app.web.request.OAuth2AuthenticationRequest
+import com.arndthewld.app.web.request.PasswordAuthenticationRequest
 import io.javalin.http.Context
 import io.javalin.http.bodyValidator
 import org.pac4j.core.profile.CommonProfile
@@ -14,22 +17,20 @@ import org.pac4j.jee.context.session.JEESessionStore
 /**
  * Handles authentication of existing users.
  */
-class AuthController(private val service: AuthService) {
-    private val logger by createLogger()
-
+class AuthController(private val authService: AuthService, private val userService: UserService) {
     /**
      * Register with plaintext password
      */
     fun register(ctx: Context) {
-        ctx.bodyValidator<UserCredentials>()
+        ctx.bodyValidator<PasswordAuthenticationRequest>()
             .check({ !it.email.isNullOrBlank() }, "email is blank")
             .check({ !it.username.isNullOrBlank() }, "username is blank")
             .check({ !it.password.isNullOrBlank() }, "password is blank")
             .get().also {
-                val token = service.register(
-                    UserCredentials(email = it.email, username = it.username, password = it.password)
-                )
-                ctx.json(mapOf("token" to token))
+                val createdUser = userService.create(it)
+                val token = authService.authenticate(createdUser.userId, UserCredentials(it.password))
+
+                ctx.json(AuthenticatedResponse(createdUser, token))
             }
     }
 
@@ -37,32 +38,57 @@ class AuthController(private val service: AuthService) {
      * Login with plaintext password
      */
     fun login(ctx: Context) {
-        logger.info("login")
-
-        ctx.bodyValidator<UserCredentials>()
-            .check({ it.email != null || it.username != null }, "no email or username specified")
-            .check({ it.password != null }, "no password specified")
+        ctx.bodyValidator<PasswordAuthenticationRequest>()
+            .check({ (!it.email.isNullOrBlank()) || !(it.username.isNullOrBlank()) }, "email or username is blank")
+            .check({ !it.password.isNullOrBlank() }, "password is blank")
             .get().also {
-                val token = service.authenticate(
-                    UserCredentials(email = it.email, username = it.username, password = it.password)
-                )
-                ctx.json(mapOf("token" to token))
+                val userId = userService.getUserId(it)
+                val token = authService.authenticate(userId, UserCredentials(it.password))
+                val user = userService.login(userId)
+
+                ctx.json(AuthenticatedResponse(user, token))
             }
     }
 
-    fun oAuthLogin(ctx: Context) {
-        ctx.json(mapOf("token" to oAuthAuthenticate(ctx, false)))
-    }
-
     fun oAuthRegister(ctx: Context) {
-        ctx.json(mapOf("token" to oAuthAuthenticate(ctx, true)))
+        val (profile, source) = requireOAuth2Profile(ctx) ?: return
+        val request =
+            OAuth2AuthenticationRequest(
+                email = profile.email,
+                username = null,
+                oAuthProviderSource = source,
+                oAuthProviderId = profile.id,
+            )
+
+        val createdUser = userService.create(request)
+        val token =
+            authService.authenticate(
+                createdUser.userId,
+                UserCredentials(request.oAuthProviderSource, request.oAuthProviderId),
+            )
+
+        ctx.json(AuthenticatedResponse(createdUser, token))
     }
 
-    /**
-     * Recursive endpoint which is initially called empty,
-     * then returned with an authenticated OAuth profile.
-     */
-    private fun oAuthAuthenticate(ctx: Context, createProfile: Boolean): String {
+    fun oAuthLogin(ctx: Context) {
+        val (profile, source) = requireOAuth2Profile(ctx) ?: return
+        val request =
+            OAuth2AuthenticationRequest(
+                email = profile.email,
+                username = null,
+                oAuthProviderSource = source,
+                oAuthProviderId = profile.id,
+            )
+
+        val userId = userService.getUserId(request)
+        val token =
+            authService.authenticate(userId, UserCredentials(request.oAuthProviderSource, request.oAuthProviderId))
+        val user = userService.login(userId)
+
+        ctx.json(AuthenticatedResponse(user, token))
+    }
+
+    private fun requireOAuth2Profile(ctx: Context): Pair<CommonProfile, OAuthProviderSource>? {
         val source = OAuthProviderSource.valueOf(ctx.pathParam("provider").uppercase())
 
         val manager = ProfileManager(JavalinWebContext(ctx), JEESessionStore.INSTANCE)
@@ -70,25 +96,18 @@ class AuthController(private val service: AuthService) {
 
         if (optProfile.isEmpty) {
             // We are serving them for the first time, direct them to login.
-            service.fetchOAuthProfile(ctx, source)
-            return ""
+            authService.fetchOAuthProfile(ctx, source)
+            return null
         }
 
-        val profile = optProfile.get()
-        return if (createProfile) {
-            ""
-        } else {
-            service.authenticate(
-                UserCredentials(email = profile.email, oAuthProviderSource = source, oAuthProviderId = profile.id)
-            )
-        }
+        return Pair(optProfile.get(), source)
     }
 
     fun oauthCallback(ctx: Context) {
-        service.oAuthCallback(ctx)
+        authService.oAuthCallback(ctx)
     }
 
     fun logout(ctx: Context) {
-        service.logout(ctx)
+        authService.logout(ctx)
     }
 }

@@ -11,16 +11,8 @@ class Router(
     private val authController: AuthController,
     private val userController: UserController,
 ) : KoinComponent {
-
     fun register(config: RouterConfig) {
         config.apiBuilder {
-
-            path("/") {
-                get {
-                    it.json("insert world and stuff here")
-                }
-            }
-
             // Auth
             path("auth") {
                 post("login", authController::login, RoleState.ANYONE)
@@ -37,11 +29,11 @@ class Router(
             // Users
             path("/user") {
                 get("self", userController::getCurrent, RoleState.AUTHENTICATED)
-                get("{username}", userController::getUser, RoleState.AUTHENTICATED)
+                get("{username}", userController::getProfile, RoleState.AUTHENTICATED)
             }
 
             path("/profile") {
-
+                // TODO
             }
         }
     }

@@ -2,7 +2,9 @@ import org.gradle.accessors.dm.LibrariesForLibs
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.kapt")
+    `java-library`
+    kotlin("jvm")
+    kotlin("kapt")
 }
 
 tasks.withType<KotlinCompile> {
@@ -24,4 +26,5 @@ val implementation by configurations
 dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlin.coroutines.core)
+    implementation(libs.kotlin.serialization)
 }

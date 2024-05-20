@@ -11,13 +11,14 @@ import io.javalin.security.RouteRole
  * Low-level page access restriction.
  */
 enum class RoleState : RouteRole {
-    ANYONE, AUTHENTICATED, ADMIN
+    ANYONE,
+    AUTHENTICATED,
+    ADMIN,
 }
 
-private const val headerTokenName = "Authorization"
+private const val HEADER_TOKEN_NAME = "Authorization"
 
 class AuthConfig(private val jwtProvider: JwtProvider) {
-
     fun handleAccess(ctx: Context) {
         val permittedRoles = ctx.routeRoles()
 
@@ -31,8 +32,9 @@ class AuthConfig(private val jwtProvider: JwtProvider) {
     }
 
     private fun getJwtTokenHeader(ctx: Context): DecodedJWT? {
-        val tokenHeader = ctx.header(headerTokenName)?.substringAfter("Token")?.trim()
-            ?: return null
+        val tokenHeader =
+            ctx.header(HEADER_TOKEN_NAME)?.substringAfter("Token")?.trim()
+                ?: return null
 
         return jwtProvider.decodeJWT(tokenHeader)
     }

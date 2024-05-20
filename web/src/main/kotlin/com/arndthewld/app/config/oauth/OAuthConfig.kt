@@ -15,19 +15,24 @@ import org.pac4j.oauth.client.Google2Client
  */
 enum class OAuthProviderSource(val clientId: String) {
     GOOGLE("Google2Client"),
-    DISCORD("DiscordClient")
+    DISCORD("DiscordClient"),
 }
 
 class OAuthConfig(google2Client: Google2Client) {
-    private var config = Config(AppEnvConfig["auth.oauth.callback"], google2Client).also {
-        it.clients.callbackUrlResolver = NoParameterCallbackUrlResolver()
-    }
+    private var config =
+        Config(AppEnvConfig["auth.oauth.callback"], google2Client).also {
+            it.clients.callbackUrlResolver = NoParameterCallbackUrlResolver()
+        }
     private var callbackHandler = CallbackHandler(config, "/", true)
-    private var logoutHandler: LogoutHandler = LogoutHandler(config, "/?").also {
-        it.destroySession = true
-    }
+    private var logoutHandler: LogoutHandler =
+        LogoutHandler(config, "/?").also {
+            it.destroySession = true
+        }
 
-    fun handleLogin(context: Context, source: OAuthProviderSource) {
+    fun handleLogin(
+        context: Context,
+        source: OAuthProviderSource,
+    ) {
         SecurityHandler(config, source.clientId).handle(context)
     }
 
