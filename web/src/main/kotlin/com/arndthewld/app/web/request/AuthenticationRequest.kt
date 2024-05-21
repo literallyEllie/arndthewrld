@@ -1,9 +1,12 @@
 package com.arndthewld.app.web.request
 
 import com.arndthewld.app.config.oauth.OAuthProviderSource
+import com.arndthewld.app.domain.Profile
 import com.arndthewld.app.domain.User
 
-// Registration
+/**
+ * A login or registration request.
+ */
 sealed interface AuthenticationRequest {
     val email: String?
     val username: String?
@@ -22,11 +25,12 @@ data class OAuth2AuthenticationRequest(
     val oAuthProviderId: String?,
 ) : AuthenticationRequest
 
-// Login
-sealed interface LoginRequest {
-    val email: String?
-}
-
-data class AuthenticatedResponse(val userId: Long, val email: String, val username: String?, val token: String) {
-    constructor(user: User, token: String) : this(user.userId, user.email, user.username, token)
+data class AuthenticatedResponse(
+    val userId: Long,
+    val email: String,
+    val username: String?,
+    val profile: Profile,
+    val token: String,
+) {
+    constructor(user: User, profile: Profile, token: String) : this(user.userId, user.email, user.username, profile, token)
 }

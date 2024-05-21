@@ -3,7 +3,6 @@ plugins {
     id("convention-kotlin")
     id("convention-style")
     id("convention-test")
-    kotlin("plugin.serialization") version libs.versions.kotlin.get() // doesn't like buildscript..
 }
 
 group = "com.arndthewrld.web"
@@ -16,7 +15,6 @@ dependencies {
     // JSON
     implementation(libs.jackson.core)
     implementation(libs.jackson.kotlin)
-    implementation(libs.jackson.datetime)
 
     // di
     implementation(libs.koin)

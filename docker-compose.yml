@@ -2,6 +2,8 @@ services:
   app:
     image: arndthewlrd:${VERSION}
     build: .
+    ports:
+      - "${PORT}:80"
     volumes:
       - /etc/arndthewlrd/config:/app/config
     env_file:

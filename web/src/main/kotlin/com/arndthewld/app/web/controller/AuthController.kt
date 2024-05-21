@@ -17,7 +17,9 @@ import org.pac4j.jee.context.session.JEESessionStore
 /**
  * Handles authentication of existing users.
  */
-class AuthController(private val authService: AuthService, private val userService: UserService) {
+class AuthController(
+    private val authService: AuthService, private val userService: UserService
+) {
     /**
      * Register with plaintext password
      */
@@ -29,8 +31,9 @@ class AuthController(private val authService: AuthService, private val userServi
             .get().also {
                 val createdUser = userService.create(it)
                 val token = authService.authenticate(createdUser.userId, UserCredentials(it.password))
+                val profile = userService.getProfileById(createdUser.userId)
 
-                ctx.json(AuthenticatedResponse(createdUser, token))
+                ctx.json(AuthenticatedResponse(createdUser, profile, token))
             }
     }
 
@@ -45,19 +48,20 @@ class AuthController(private val authService: AuthService, private val userServi
                 val userId = userService.getUserId(it)
                 val token = authService.authenticate(userId, UserCredentials(it.password))
                 val user = userService.login(userId)
+                val profile = userService.getProfileById(user.userId)
 
-                ctx.json(AuthenticatedResponse(user, token))
+                ctx.json(AuthenticatedResponse(user, profile, token))
             }
     }
 
     fun oAuthRegister(ctx: Context) {
-        val (profile, source) = requireOAuth2Profile(ctx) ?: return
+        val (authProfile, source) = requireOAuth2Profile(ctx) ?: return
         val request =
             OAuth2AuthenticationRequest(
-                email = profile.email,
+                email = authProfile.email,
                 username = null,
                 oAuthProviderSource = source,
-                oAuthProviderId = profile.id,
+                oAuthProviderId = authProfile.id,
             )
 
         val createdUser = userService.create(request)
@@ -66,26 +70,28 @@ class AuthController(private val authService: AuthService, private val userServi
                 createdUser.userId,
                 UserCredentials(request.oAuthProviderSource, request.oAuthProviderId),
             )
+        val profile = userService.getProfileById(createdUser.userId)
 
-        ctx.json(AuthenticatedResponse(createdUser, token))
+        ctx.json(AuthenticatedResponse(createdUser, profile, token))
     }
 
     fun oAuthLogin(ctx: Context) {
-        val (profile, source) = requireOAuth2Profile(ctx) ?: return
+        val (authProfile, source) = requireOAuth2Profile(ctx) ?: return
         val request =
             OAuth2AuthenticationRequest(
-                email = profile.email,
+                email = authProfile.email,
                 username = null,
                 oAuthProviderSource = source,
-                oAuthProviderId = profile.id,
+                oAuthProviderId = authProfile.id,
             )
 
         val userId = userService.getUserId(request)
         val token =
             authService.authenticate(userId, UserCredentials(request.oAuthProviderSource, request.oAuthProviderId))
         val user = userService.login(userId)
+        val profile = userService.getProfileById(user.userId)
 
-        ctx.json(AuthenticatedResponse(user, token))
+        ctx.json(AuthenticatedResponse(user, profile, token))
     }
 
     private fun requireOAuth2Profile(ctx: Context): Pair<CommonProfile, OAuthProviderSource>? {

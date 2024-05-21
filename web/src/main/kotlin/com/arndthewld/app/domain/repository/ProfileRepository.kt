@@ -28,7 +28,7 @@ class ProfileRepository(private val dataSource: DataSource) {
 
     fun findByUserId(userId: Long): Profile? {
         return transaction(Database.connect(dataSource)) {
-            Users.selectAll()
+            Profiles.selectAll()
                 .where { Profiles.userId eq userId }
                 .map { Profiles.toDomain(it) }
                 .firstOrNull()

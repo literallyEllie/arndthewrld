@@ -4,42 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb019b8-10d0-4464-980e-fad34acbd64b" name="Changes" comment="basic auth app yipee">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detekt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/ProfileRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/request/AuthenticationRequest.kt" afterDir="false" />
+    <list default="true" id="3eb019b8-10d0-4464-980e-fad34acbd64b" name="Changes" comment="redo auth/principle user structure and responses">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/jackson/KotlinxDateTimeModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/trip/Accommodation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/trip/Transport.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/trip/Trip.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/trip/TripStep.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-kotlin.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/convention-kotlin.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/web/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/App.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AppConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AppConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AuthConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/AuthConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/ModulesConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/ModulesConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/SqlConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/SqlConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/AppEnvConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/AppEnvConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/InstanceEnvironment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/environment/InstanceEnvironment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth/OAuthConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth/OAuthConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/Cipher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/Cipher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/JwtProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/security/JwtProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/session/DevSessionHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/session/DevSessionHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/Profile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/Profile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/UserCredentials.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/UserCredentials.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/AuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/AuthRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/ProfileRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/ProfileRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/repository/UserRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/UserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/AuthService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/AuthService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/CredentialsValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/service/auth/CredentialsValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/ContextExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/ContextExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext/LogExt.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/ErrorResponseMapping.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/ErrorResponseMapping.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/Router.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/Router.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/AuthController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/AuthController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/controller/UserController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/request/AuthenticationRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/web/request/AuthenticationRequest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +87,8 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="package-info" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -192,6 +174,7 @@
       <recent name="$PROJECT_DIR$/web/src/main/java/com/arndthewrld/web/endpoint/user/principle" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/domain/trip" />
       <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/ext" />
       <recent name="$PROJECT_DIR$/web/src/main/kotlin/com/arndthewld/app/config/oauth" />
       <recent name="$PROJECT_DIR$/commons/src/main/kotlin/com/arndthewrld/date" />
@@ -217,7 +200,7 @@
       <recent name="com.arndthewrld.web.endpoint" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.arndthewrld [detekt]">
+  <component name="RunManager" selected="Kotlin.AppKt">
     <configuration name="arndthewrld [checkKotlinGradlePluginConfigurationErrors]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -322,11 +305,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.arndthewrld [detekt]" />
+        <item itemvalue="Kotlin.AppKt" />
         <item itemvalue="Gradle.arndthewrld [ktlintFormat]" />
+        <item itemvalue="Gradle.arndthewrld [detekt]" />
         <item itemvalue="Gradle.arndthewrld [detektMain]" />
         <item itemvalue="Gradle.arndthewrld [checkKotlinGradlePluginConfigurationErrors]" />
-        <item itemvalue="Kotlin.AppKt" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +345,7 @@
       <workItem from="1715933651379" duration="4439000" />
       <workItem from="1716004661501" duration="1832000" />
       <workItem from="1716188536466" duration="4083000" />
-      <workItem from="1716194545022" duration="20768000" />
+      <workItem from="1716194545022" duration="29640000" />
     </task>
     <task id="LOCAL−00001" summary="avaje">
       <option name="closed" value="true" />
@@ -378,7 +361,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1715536992520</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="redo auth/principle user structure and responses">
+      <option name="closed" value="true" />
+      <created>1716230080969</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1716230080969</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +391,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="avaje" />
     <MESSAGE value="basic auth app yipee" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic auth app yipee" />
+    <MESSAGE value="redo auth/principle user interactions" />
+    <MESSAGE value="redo auth/principle user structure and responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="redo auth/principle user structure and responses" />
   </component>
 </project>

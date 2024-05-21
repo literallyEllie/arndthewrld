@@ -96,6 +96,10 @@ class UserService(
         return repository.findUserByUsername(username) ?: throw NotFoundResponse()
     }
 
+    fun getProfileById(userId: Long): Profile {
+        return profileRepository.findByUserId(userId) ?: Profile.empty(userId)
+    }
+
     fun getProfileByUsername(username: String?): Profile {
         if (username.isNullOrBlank()) {
             throw BadRequestResponse("invalid username")

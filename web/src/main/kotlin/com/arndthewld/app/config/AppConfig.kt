@@ -1,11 +1,12 @@
 package com.arndthewld.app.config
 
 import com.arndthewld.app.config.environment.AppEnvConfig
+import com.arndthewld.app.config.jackson.KotlinxDateTimeModule
 import com.arndthewld.app.config.session.DevSessionHandler
 import com.arndthewld.app.web.ErrorExceptionMapping
 import com.arndthewld.app.web.Router
+import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import io.javalin.Javalin
 import io.javalin.json.JavalinJackson
 import org.koin.core.component.KoinComponent
@@ -26,14 +27,13 @@ class AppConfig : KoinComponent {
             modules(ModulesConfig.allModules)
         }
 
-        configureMapper()
         val app =
             Javalin.create { config ->
                 config.apply {
                     bundledPlugins.enableDevLogging()
 //                staticFiles.enableWebjars()
 
-                    jetty.defaultPort = AppEnvConfig["http.server_port"]?.toInt() ?: 8080
+                    jetty.defaultPort = AppEnvConfig["PORT"]?.toInt() ?: 8080
 
                     // auth
                     router.mount {
@@ -41,6 +41,9 @@ class AppConfig : KoinComponent {
                     }
                     router.contextPath = AppEnvConfig["http.context"] ?: "/api"
                     config.jetty.modifyServletContextHandler { it.sessionHandler = DevSessionHandler().fileBased() }
+
+                    // json
+                    jsonMapper(JavalinJackson().updateMapper { configureMapper(it) })
 
                     // routes
                     appRouter.register(router)
@@ -57,12 +60,14 @@ class AppConfig : KoinComponent {
         return app
     }
 
-    private fun configureMapper() {
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-        JavalinJackson.defaultMapper()
-            .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-            .setDateFormat(dateFormat)
-            .registerModule(JavaTimeModule()) // TODO kotlin datetime serializes to shit
-            .configure(SerializationFeature.WRITE_DATES_WITH_ZONE_ID, true)
+    private fun configureMapper(mapper: ObjectMapper) {
+        mapper.apply {
+            disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
+            registerModule(KotlinxDateTimeModule())
+
+            dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+            configure(SerializationFeature.WRITE_DATES_WITH_ZONE_ID, true)
+        }
     }
+
 }
